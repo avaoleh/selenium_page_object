@@ -46,6 +46,7 @@ class BasePage():
             alert = self.browser.switch_to.alert
             alert_text = alert.text
             print(f"Your code: {alert_text}")
+            time.sleep(20)
             alert.accept()
             return True
         except NoAlertPresentException:

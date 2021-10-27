@@ -25,7 +25,7 @@ class ProductPage(BasePage):
         Проверка, что выбранный продукт добавлен в корзину
         """
         self.should_be_correct_adding_product_title()
-        # self.should_be_correct_adding_product_price()
+        self.should_be_correct_adding_product_price()
 
     def should_be_correct_adding_product_title(self):
         """Проверка сообщения о том, что товар добавлен в корзину.

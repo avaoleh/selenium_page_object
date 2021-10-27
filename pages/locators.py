@@ -12,7 +12,7 @@ class LoginPageLocators():
 class ProductPageLocators():
      BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-add-to-basket")
 
-     PRODUCT_PRICE = (By.CSS_SELECTOR, ".basket-mini :nth-child(1) ")
+     PRODUCT_PRICE = (By.CSS_SELECTOR, "p.price_color")
      CART_PRICE = (By.CSS_SELECTOR, '.alertinner p strong')
 
      PRODUCT_NAME = (By.CSS_SELECTOR, 'div.product_main > h1')

@@ -18,3 +18,5 @@ class ProductPageLocators():
      PRODUCT_NAME = (By.CSS_SELECTOR, 'div.product_main > h1')
      ITEM_NAME = (By.CSS_SELECTOR, 'div.page_inner > ul.breadcrumb > li.active')
 
+     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages div:nth-child(1)")
+

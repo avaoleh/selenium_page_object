@@ -15,7 +15,7 @@ class BasePage():
         """
         self.browser = browser
         self.url = url
-        # self.browser.implicitly_wait(timeout)
+        self.browser.implicitly_wait(timeout)
 
     def open(self):
         """метод открывает нужную страницу,
@@ -61,6 +61,11 @@ class BasePage():
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
+    def go_to_cart_page(self):
+        # cart_button = WebDriverWait(self.browser, 1).until(EC.element_to_be_clickable((*BasePageLocators.CART_BUTTON, )))
+        cart_button = self.browser.find_element(*BasePageLocators.CART_BUTTON)
+        cart_button.click()
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert

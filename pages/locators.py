@@ -4,6 +4,9 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
 
+    CART_BUTTON = (By.CSS_SELECTOR, ".basket-mini span a.btn.btn-default")
+    CART_EMPTY = (By.CSS_SELECTOR, "#content_inner > p")
+
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 

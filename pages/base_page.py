@@ -15,7 +15,7 @@ class BasePage():
         """
         self.browser = browser
         self.url = url
-        self.browser.implicitly_wait(timeout)
+        # self.browser.implicitly_wait(timeout)
 
     def open(self):
         """метод открывает нужную страницу,
@@ -66,6 +66,9 @@ class BasePage():
         # cart_button = WebDriverWait(self.browser, 1).until(EC.element_to_be_clickable((*BasePageLocators.CART_BUTTON, )))
         cart_button = self.browser.find_element(*BasePageLocators.CART_BUTTON)
         cart_button.click()
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented, probably unauthorised user"
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
